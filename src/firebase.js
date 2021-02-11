@@ -1,3 +1,5 @@
+import firebase from 'firebase'
+
 const firebaseConfig = {
     apiKey: "AIzaSyDGk-J5690HXYcWwXbuBGOfTaUy1AGMa_w",
     authDomain: "netflix-challenge-f23ce.firebaseapp.com",
@@ -6,3 +8,9 @@ const firebaseConfig = {
     messagingSenderId: "704264828382",
     appId: "1:704264828382:web:4c2f7315ad8f450497994f"
   };
+
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  const db = firebaseApp.firestore();
+  const auth = firebase.auth();
+
+  export { db, auth };
